@@ -91,6 +91,8 @@
   }
 }
 
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -3473,6 +3475,29 @@ textarea.form-control-lg {
 
 .dropdown-menu.show {
   display: block;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* ajuste a opacidade conforme necessário */
+    z-index: 1;
+}
+.masthead {
+    position: relative;
+    min-height: 400px; /* ajuste conforme necessário */
 }
 
 .dropdown-header {

@@ -57,28 +57,15 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitButton');
-
-    if(submitBtn) { 
-        submitBtn.addEventListener('mouseup', function() { 
-            
-        })
+    const agendarBtn = document.getElementById('agendarBtn');
+    if (agendarBtn) {
+        agendarBtn.addEventListener('click', function() {
+            const numero = '5535997437851'; // Seu número com DDI e DDD
+            const texto = encodeURIComponent('Olá! Gostaria de agendar um horário para estética automotiva.');
+            const url = `https://api.whatsapp.com/send?phone=${numero}&text=${texto}`;
+            window.open(url, '_blank');
+        });
     }
-    // submitBtn.classList.remove('disabled');
-    // form.addEventListener('submit', function(e) {
-    //     e.preventDefault();
-    //     const nome = document.getElementById('name').value;
-    //     const email = document.getElementById('email').value;
-    //     const telefone = document.getElementById('phone').value;
-    //     const mensagem = document.getElementById('message').value;
-    //     const texto = `Nome: ${nome}%0AEmail: ${email}%0ATelefone: ${telefone}%0AMensagem: ${mensagem}`;
-    //     const numero = '35991288248'; // Seu número com DDI e DDD
-    //     const url = `https://api.whatsapp.com/send?phone=${numero}&text=${texto}`;
-    //     window.open(url, '_blank');
-    });
 });
 
 
